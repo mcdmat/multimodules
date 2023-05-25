@@ -4,18 +4,15 @@ import { CommonModule } from '@angular/common';
 import { AccountRoutingModule } from './account-routing.module';
 import { HomeComponent } from './pages/home/home.component';
 import { LogicComponent } from './components/feature/logic/logic.component';
-import { CardComponent } from './components/ui/card/card.component';
-
+import { ModsharedModule } from '../../shared/modshared/components/card/modshared.module';
+// import { CardComponent } from 'src/app/shared/modshared/components/card/card.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
     LogicComponent,
-    CardComponent
+    // CardComponent
   ],
-  imports: [
-    CommonModule,
-    AccountRoutingModule
-  ]
+  imports: [CommonModule, AccountRoutingModule, ModsharedModule],
 })
-export class AccountModule { }
+export class AccountModule {}

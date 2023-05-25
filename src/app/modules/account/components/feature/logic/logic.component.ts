@@ -18,13 +18,12 @@ export class LogicComponent {
     this.route.params.subscribe((params) => {
       this.userID = +params['userID'];
     });
-    // this.getUser();
     this.getAllUsers();
   }
   getAllUsers() {
     this.apiService.getAll().subscribe((users) => {
-      const foundUser = users.find(u => u.id === this.userID);
-      if (foundUser) { 
+      const foundUser = users.find((u) => u.id === this.userID);
+      if (foundUser) {
         this.user = foundUser;
       }
     });
